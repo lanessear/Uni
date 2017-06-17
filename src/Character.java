@@ -6,7 +6,8 @@ public class Character {
 
     /**
      * Der Konstruktor für den Charakter.
-     * @param hp liest die vorgegebenen HP für den Charakter ein.
+     *
+     * @param hp  liest die vorgegebenen HP für den Charakter ein.
      * @param atk liest die vorgegebenen Schadenspunkte für den Charakter ein.
      * @param hit liest die vorgegebene Hitchance für den Charakter ein.
      */
@@ -20,6 +21,7 @@ public class Character {
 
     /**
      * Getter hp
+     *
      * @return hp gibt die HP des Charakters zurück.
      */
 
@@ -30,6 +32,7 @@ public class Character {
 
     /**
      * Getter atk
+     *
      * @return atk gibt die Schadenspunkte des Charakters zurück.
      */
 
@@ -40,6 +43,7 @@ public class Character {
 
     /**
      * Die Methode toString wandelt den Integer hp zu einem String um und gibt diesen zurück.
+     *
      * @return currentHP gibt die HP des Charakters in einem String zurück.
      */
 
@@ -53,6 +57,7 @@ public class Character {
      * die Attacke des Charakters Schaden anrichten wird oder nicht. Sollte
      * die Hitchance des Charakters größer oder gleich der Zufallszahl sein,
      * trifft er.
+     *
      * @return damage gibt die größe des Schadens zurück.
      */
 
@@ -67,6 +72,7 @@ public class Character {
 
     /**
      * Die Methode takeDamage zieht dem Charakter HP der Größe damage ab.
+     *
      * @param damage ist der Schaden, der dem Charakter zugefügt wird.
      */
 

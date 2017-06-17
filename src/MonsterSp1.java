@@ -4,9 +4,10 @@ public class MonsterSp1 extends Monster {
     /**
      * Konstruktor für das MonsterSp2. Die Parameter werden von der Klasse
      * Monster übernommen.
-     * @param hp liest die vorgegebenen HP für das Monster ein.
-     * @param atk liest die vorgegebenen Schadenspunkte für das Monster ein.
-     * @param hit liest die vorgegebene Hitchance für das Monster ein.
+     *
+     * @param hp     liest die vorgegebenen HP für das Monster ein.
+     * @param atk    liest die vorgegebenen Schadenspunkte für das Monster ein.
+     * @param hit    liest die vorgegebene Hitchance für das Monster ein.
      * @param shield liest das vorgegebene Schild für das Monster ein.
      */
 
@@ -18,6 +19,7 @@ public class MonsterSp1 extends Monster {
     /**
      * Die Methode takeDamage zieht dem Monster HP der Größe damage minus
      * seines Schildes ab.
+     *
      * @param damage ist der Schaden, der dem Monster zugefügt wird.
      */
 

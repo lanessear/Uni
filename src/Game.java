@@ -10,37 +10,39 @@ public class Game {
          * Überprüfung auf fehlerhafte Eingabe
          */
 
-        if (meeps.length > 3 || meeps.length < 3) {
+        if (meeps.length != 3) {
             System.out.println("Wrong input. It should be: [HP] [DMG] [HIT]");
             return;
         } else {
             for (int i = 0; i < meeps.length; i++) {
                 Scanner scanner = new Scanner(meeps[i]);
                 if (!scanner.hasNextInt()) {
-                    System.out.println(" The " + (i + 1) + " argument : "
-                            + meeps[i] + " is not a number.");
+                    System.out.println("Argument number " + (i + 1) + " (\""
+                            + meeps[i] + "\") is not a number.");
                     return;
                 }
 
-                playerHP = Integer.parseInt(meeps[0]);
-                playerATK = Integer.parseInt(meeps[1]);
-                playerHIT = Integer.parseInt(meeps[2]);
 
                 switch (i) {
                     case 0:
+                        playerHP = Integer.parseInt(meeps[0]);
                         if (playerHP <= 0) {
                             System.out.println("The HP are too low.");
                         }
                         break;
                     case 1:
+                        playerATK = Integer.parseInt(meeps[1]);
                         if (playerATK <= 0) {
                             System.out.println("The ATK is too low.");
                         }
                         break;
                     case 2:
+                        playerHIT = Integer.parseInt(meeps[2]);
                         if (playerHIT <= 0) {
                             System.out.println("The HIT is too low.");
                         }
+                        break;
+                    case 3:
                         if (playerHIT >= 100) {
                             System.out.println("The HIT is too high.");
                         }

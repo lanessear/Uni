@@ -3,7 +3,8 @@ public class MonsterSp2 extends Monster {
     /**
      * Konstruktor für das MonsterSp2. Die Parameter werden von der Klasse
      * Monster übernommen.
-     * @param hp liest die vorgegebenen HP für das Monster ein.
+     *
+     * @param hp  liest die vorgegebenen HP für das Monster ein.
      * @param atk liest die vorgegebenen Schadenspunkte für das Monster ein.
      * @param hit liest die vorgegebene Hitchance für das Monster ein.
      */
@@ -17,6 +18,7 @@ public class MonsterSp2 extends Monster {
      * die Attacke des Monsters Schaden anrichten wird oder nicht. Sollte
      * die Hitchance des Monsters größer oder gleich der Zufallszahl sein,
      * trifft er, außerdem heilt es sich für den zugefügen Schaden.
+     *
      * @return damage gibt die größe des Schadens zurück.
      */
 

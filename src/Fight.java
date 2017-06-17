@@ -10,10 +10,11 @@ public class Fight {
 
     /**
      * Der Konstruktor für den Kampf.
-     * @param player initialisiert den Spieler, der für diese Klasse verwendet
-     * werden soll.
+     *
+     * @param player  initialisiert den Spieler, der für diese Klasse verwendet
+     *                werden soll.
      * @param monster initialisiert das Monster, das für diese Klasse verwendet
-     * werden soll.
+     *                werden soll.
      */
 
     public Fight(Player player, Monster monster) {
@@ -25,6 +26,7 @@ public class Fight {
      * Die Methode move prüft, welchen Zug der Spieler wählt. Außerdem prüft sie,
      * ob eine valide Eingabe getätigt wurde und fragt erneut ab, wenn dies nicht
      * geschehen ist.
+     *
      * @return move gibt zurück, welchen der beiden Züge der Spieler wählt.
      */
 
@@ -63,6 +65,7 @@ public class Fight {
      * die HP des Monsters oder des Spielers auf oder unter 0 gesunken sind.
      * Die Methode führt den Zug des Spielers aus und gibt die jeweiligen Nachrichten
      * aus.
+     *
      * @return end gibt zurück, ob das Spiel beendet werden kann/soll.
      */
 

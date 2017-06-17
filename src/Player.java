@@ -3,7 +3,8 @@ public class Player extends Character {
 
     /**
      * Der Konstruktor für den Spieler, der die Parameter der Character-Klasse übernimmt.
-     * @param hp liest die vorgegebenen HP für den Spieler ein.
+     *
+     * @param hp  liest die vorgegebenen HP für den Spieler ein.
      * @param atk liest die vorgegebenen Schadenspunkte für den Spieler ein.
      * @param hit liest die vorgegebene Hitchance für den Spieler ein.
      */
@@ -14,6 +15,7 @@ public class Player extends Character {
 
     /**
      * Getter healPotions
+     *
      * @return gibt die restilchen Heiltränke zurück.
      */
 
@@ -28,6 +30,7 @@ public class Player extends Character {
      * Die HP des Spielers werden nur dann erhöht, wenn die Anzahl der
      * healPotions größer als 0 ist. Ist dies der Fall, wird die Zahl der
      * healPotions um 1 niedriger.
+     *
      * @return potionsLeft gibt an, ob noch Heiltränke übrig sind.
      */
 
