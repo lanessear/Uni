@@ -8,6 +8,7 @@ public class Goal extends Tile implements PlayerAction {
 
     public void startAction(Player player) {
         Game.hasWon = true;
+        System.out.println("You have won!");
     }
 
     public String toString() {
