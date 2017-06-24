@@ -12,11 +12,11 @@ public class Map {
 
     }
 
-    private void load() {
+    public void load() {
 
     }
 
-    private void start() {
+    public void start() {
 
     }
 

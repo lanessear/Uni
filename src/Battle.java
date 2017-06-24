@@ -4,7 +4,7 @@
 public class Battle extends Tile implements PlayerAction {
     private boolean used = false;
 
-    private boolean isWalkable() {
+    public boolean isWalkable() {
         return true;
     }
 
