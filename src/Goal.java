@@ -7,7 +7,7 @@ public class Goal extends Tile implements PlayerAction {
     }
 
     public void startAction(Player player) {
-
+        Game.hasWon = true;
     }
 
     public String toString() {

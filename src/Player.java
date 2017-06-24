@@ -23,6 +23,14 @@ public class Player extends Character {
         return this.healPotions;
     }
 
+    public void setHealPotions(int healPotions) {
+        this.healPotions = healPotions;
+    }
+
+    public void setHp(int hp) {
+        this.hp = hp;
+    }
+
     /**
      * Die Methode usePotion erhöht die HP des Spielers um 50, soweit die
      * maximalen HP nicht überschritten werden. In dem Fall, werden die HP

@@ -1,6 +1,8 @@
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Game {
+    public static boolean hasWon = false;
     public static void main(String[] meeps) {
         int playerHP = 0;
         int playerATK = 0;
@@ -51,51 +53,16 @@ public class Game {
             }
         }
 
-        /**
-         * Initialisierung des Spiels
-         */
-
-        boolean end = false;
-
         Player player = new Player(playerHP, playerATK, playerHIT);
-        Monster monster = new Monster(0, 0, 0);
+        Map map = new Map("map.txt", player);
 
-        System.out.print("You fight against the ");
-
-        int ranNum = (int) (Math.random() * 3);
-
-        if (ranNum == 0) {
-            monster = new Monster(player.getHP() * 2,
-                    player.getATK() / 2, 50);
-            System.out.println("standard monster.");
+        try {
+            map.load();
+        } catch (IOException e) {
+            System.out.println("Error, map does not exist.");
+            return;
         }
 
-        if (ranNum == 1) {
-            monster = new MonsterSp1(player.getHP() * 2,
-                    player.getATK() / 2, 50,
-                    player.getATK() / 5);
-            System.out.println("shield monster.");
-        }
-
-        if (ranNum == 2) {
-            monster = new MonsterSp2(player.getHP() * 2,
-                    player.getATK() / 2, 50);
-            System.out.println("healing monster.");
-        }
-
-        Fight fight = new Fight(player, monster);
-
-        /**
-         * Start des Spiels
-         */
-
-        while (!end) {
-            System.out.println("--------------");
-            System.out.println("Potions left: " + player.getHealPotions());
-            System.out.println("Player HP: " + player.toString());
-            System.out.println("Monster HP: " + monster.toString());
-            System.out.println("--------------");
-            end = fight.turn();
-        }
+        map.start();
     }
 }

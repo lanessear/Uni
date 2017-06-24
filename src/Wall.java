@@ -3,7 +3,7 @@
  */
 public class Wall extends Tile {
     public boolean isWalkable() {
-        return true;
+        return false;
     }
 
     public String toString() {

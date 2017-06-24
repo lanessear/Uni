@@ -7,7 +7,9 @@ public class Well extends Tile implements PlayerAction {
     }
 
     public void startAction(Player player) {
-
+        player.setHealPotions(3);
+        player.setHp(player.getMaxHP());
+        System.out.println("Player regenerated health and potions.");
     }
 
     public String toString() {

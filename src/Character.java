@@ -31,6 +31,17 @@ public class Character {
     }
 
     /**
+     * Getter maxHp
+     *
+     * @return maxHp gibt die MaxHP des Charakters zurück.
+     */
+
+    public int getMaxHP() {
+        int maxHp = this.maxHP;
+        return maxHp;
+    }
+
+    /**
      * Getter atk
      *
      * @return atk gibt die Schadenspunkte des Charakters zurück.
