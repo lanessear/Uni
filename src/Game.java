@@ -2,7 +2,15 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Game {
-    public static boolean hasWon = false;
+    private static boolean hasWon = false;
+
+    public static boolean getHasWon() {
+        return hasWon;
+    }
+
+    public static void setHasWon(boolean won) {
+        hasWon = won;
+    }
 
     public static void main(String[] meeps) {
         int playerHP = 0;

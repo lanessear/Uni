@@ -83,12 +83,12 @@ public class Map {
      * entsprechende startAction()-Methode aufgerufen.
      */
     public void start() {
-        while(!Game.hasWon) {
+        while(!Game.getHasWon()) {
             printMap();
             String input = readInput();
             move(input);
             if(player.getHP() == 0) {
-                Game.hasWon = true;
+                Game.setHasWon(true);
             }
         }
     }
