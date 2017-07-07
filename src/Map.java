@@ -8,12 +8,12 @@ import java.util.Scanner;
  * Created by Lanessear on 24.06.2017.
  */
 public class Map {
-    private int playerXCoordinate;
-    private int playerYCoordinate;
+    protected int playerXCoordinate;
+    protected int playerYCoordinate;
     private Scanner sc;
-    private Player player;
+    protected Player player;
     private String path;
-    private Tile[][] map;
+    protected Tile[][] map;
 
     public Map(String path, Player player) {
         this.sc = new Scanner(System.in);
@@ -62,6 +62,7 @@ public class Map {
                     case 'G':
                         map[y][x] = new Goal();
                         break;
+                    default: map[y][x] = null;
                 }
 
                 x++;
