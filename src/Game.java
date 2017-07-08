@@ -75,7 +75,6 @@ public class Game {
             map.load();
         } catch (IOException e) {
             System.out.println("Map does not pre-exist. Will be generated.");
-            map = new GeneratedMap(randomDimension(), randomDimension(), player);
 
             while (error) {
                 map = new GeneratedMap(randomDimension(), randomDimension(), player);
@@ -89,11 +88,14 @@ public class Game {
                 if (!error) {
                     try {
                         map.start();
+                        return;
                     } catch (NullPointerException j) {
                         error = true;
                     }
                 }
             }
         }
+
+        map.start();
     }
 }
