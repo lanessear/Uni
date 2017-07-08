@@ -114,6 +114,7 @@ public class Map {
     private void move(String input) {
         switch(input) {
             case "w":
+            case "W":
                 if(map[playerYCoordinate - 1][playerXCoordinate].isWalkable()) {
                     playerYCoordinate = playerYCoordinate - 1;
                 } else {
@@ -121,6 +122,7 @@ public class Map {
                 }
                 break;
             case "a":
+            case "A":
                 if(map[playerYCoordinate][playerXCoordinate - 1].isWalkable()) {
                     playerXCoordinate = playerXCoordinate - 1;
                 } else {
@@ -128,6 +130,7 @@ public class Map {
                 }
                 break;
             case "s":
+            case "S":
                 if(map[playerYCoordinate + 1][playerXCoordinate].isWalkable()) {
                     playerYCoordinate = playerYCoordinate + 1;
                 } else {
@@ -135,6 +138,7 @@ public class Map {
                 }
                 break;
             case "d":
+            case "D":
                 if(map[playerYCoordinate][playerXCoordinate + 1].isWalkable()) {
                     playerXCoordinate = playerXCoordinate + 1;
                 } else {
