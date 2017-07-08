@@ -10,10 +10,10 @@ import java.util.Scanner;
 public class Map {
     protected int playerXCoordinate;
     protected int playerYCoordinate;
-    private Scanner sc;
     protected Player player;
-    private String path;
     protected Tile[][] map;
+    private Scanner sc;
+    private String path;
 
     public Map(String path, Player player) {
         this.sc = new Scanner(System.in);

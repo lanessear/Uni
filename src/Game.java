@@ -11,17 +11,17 @@ public class Game {
     public static void setHasWon(boolean won) {
         hasWon = won;
     }
-    
-	private static int randomDimension() {
-		int random = (int)(Math.random()*25);
-		if(random < 3) {
-			return randomDimension();
-		}
-		if(random/2 == (random + 1)/2) {
-			return random + 1;
-		}
-		return random;
-	}
+
+    private static int randomDimension() {
+        int random = (int) (Math.random() * 45);
+        if (random < 3) {
+            return randomDimension();
+        }
+        if (random / 2 == (random + 1) / 2) {
+            return random + 1;
+        }
+        return random;
+    }
 
     public static void main(String[] meeps) {
         int playerHP = 0;
@@ -29,7 +29,7 @@ public class Game {
         int playerHIT = 0;
 
         /**
-         * Überprüfung auf fehlerhafte Eingabe
+         * ï¿½berprï¿½fung auf fehlerhafte Eingabe
          */
 
         if (meeps.length != 3) {
@@ -69,27 +69,31 @@ public class Game {
 
         Player player = new Player(playerHP, playerATK, playerHIT);
         Map map = new Map("map.txt", player);
+        boolean error = true;
 
         try {
             map.load();
         } catch (IOException e) {
-        	System.out.println("Map does not pre-exist. Will be generated.");
-        	map = new GeneratedMap(randomDimension(), randomDimension(), player);
-        	boolean error = true;
-        	
-        	while(error) {
-            	map = new GeneratedMap(randomDimension(), randomDimension(), player);
-        		error = false;
-        		try {
-        			map.load();
-        		} catch(IOException i) {
-        			error = true;
-        		} catch(StackOverflowError j) {
-        			error = true;
-        		}
-        	}
-        }
+            System.out.println("Map does not pre-exist. Will be generated.");
+            map = new GeneratedMap(randomDimension(), randomDimension(), player);
 
-        map.start();
+            while (error) {
+                map = new GeneratedMap(randomDimension(), randomDimension(), player);
+                error = false;
+                try {
+                    map.load();
+                } catch (IOException i) {
+                    error = true;
+                }
+
+                if (!error) {
+                    try {
+                        map.start();
+                    } catch (NullPointerException j) {
+                        error = true;
+                    }
+                }
+            }
+        }
     }
 }
