@@ -24,14 +24,12 @@ public class GeneratedMap extends Map {
                 map[i][j] = initMap(i, j);
             }
         }
-        System.out.println("1% ... Map initialized.");
 
         if (!playerPlaced() && !goalPlaced()) {
             counter++;
             load();
             return;
         }
-        System.out.println("20% ... Player & Goal placed.");
 
         counter = 0;
         while (!checkPathDone()) {
@@ -41,31 +39,25 @@ public class GeneratedMap extends Map {
             }
             counter++;
             try {
-                System.out.println("30% ... Generaing path...");
                 generatePath();
             } catch (IOException e) {
-                System.out.println(e);
                 load();
                 return;
             }
         }
-        System.out.println("40% ... Path generated.");
 
         fillBlanks();
-        System.out.println("60% ... Blanks Filled.");
 
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
                 initTiles(i, j);
             }
         }
-        System.out.println("80% ... Battles initialized.");
 
         if (!tilesPlaced()) {
             load();
             return;
         }
-        System.out.println("100% ... Tiles Placed.");
     }
 
     private Tile initMap(int height, int width) {
